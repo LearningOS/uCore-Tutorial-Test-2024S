@@ -242,3 +242,7 @@ int enable_deadlock_detect(int enabled)
 {
 	return syscall(SYS_enable_deadlock_detect, enabled);
 }
+
+int sbrk(int n){
+	return syscall(SYS_sbrk, n);
+}
