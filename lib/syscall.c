@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#define SYS_sbrk 300
+
 void __write_buffer();
 void __clear_buffer();
 
