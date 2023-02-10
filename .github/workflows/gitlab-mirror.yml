@@ -12,10 +12,10 @@ jobs:
     - name: Mirror + trigger CI
       uses: Gallium70/gitlab-mirror-and-ci-action@master
       with:
-        args: "https://git.tsinghua.edu.cn/os-lab/public/ucore-tutorial-test-2022a"
+        args: "https://git.tsinghua.edu.cn/os-lab/2023s/public/ucore-tutorial-test-2023s"
       env:
         GITLAB_HOSTNAME: "git.tsinghua.edu.cn"
-        GITLAB_PROJECT_ID: "18731"
-        GITLAB_PROJECT_NAME: "ucore-tutorial-test-2022a"
+        GITLAB_PROJECT_ID: "20796"
+        GITLAB_PROJECT_NAME: "ucore-tutorial-test-2023s"
         GITLAB_PROJECT_TOKEN: ${{secrets.GITLAB_PROJECT_TOKEN}}
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
