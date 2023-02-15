@@ -3,7 +3,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#define SYS_sbrk 300
 
 
 int main()
