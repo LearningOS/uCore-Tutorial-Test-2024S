@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+
 void __write_buffer();
 void __clear_buffer();
 
@@ -241,4 +242,8 @@ int condvar_wait(int cid, int mid)
 int enable_deadlock_detect(int enabled)
 {
 	return syscall(SYS_enable_deadlock_detect, enabled);
+}
+
+int sbrk(int n){
+	return syscall(SYS_sbrk, n);
 }
