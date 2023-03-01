@@ -33,9 +33,9 @@ CH3_TESTS := $(CH3_BASE_TESTS) ch3_
 CH4_TESTS := $(CH4_BASE_TESTS) ch4_ ch3b_sleep ch3_
 CH5_TESTS_BASE := ch5b_ $(CH4_TESTS) ch5_ ch5t_ usershell 
 CH5_SCHED_TEST := ch5t_
-CH6_TESTS := $(CH6_BASE_TESTS) ch6_
+CH6_TESTS := $(CH6_BASE_TESTS) ch6_ ch5_ ch4_
 CH7_TESTS := $(CH7_BASE_TESTS) ch7_
-CH8_TESTS := $(CH8_BASE_TESTS) ch8_
+CH8_TESTS := $(CH8_BASE_TESTS) ch8_ ch6_ ch5_ ch4_
 
 BASE ?= 0
 
