@@ -28,7 +28,8 @@ int main()
 	assert(0 == info.syscall_times[SYSCALL_WRITE]);
 	assert(0 < info.syscall_times[SYSCALL_YIELD]);
 	assert(0 == info.syscall_times[SYSCALL_EXIT]);
-	assert(t2 - t1 <= info.time);
+	// 预留 1ms 防止舍入误差问题
+	assert(t2 - t1 <= info.time + 1);
 	assert(info.time < t3 - t1 + 100);
 	assert(Running == info.status);
 
@@ -42,7 +43,8 @@ int main()
 	assert(1 == info.syscall_times[SYSCALL_WRITE]);
 	assert(0 < info.syscall_times[SYSCALL_YIELD]);
 	assert(0 == info.syscall_times[SYSCALL_EXIT]);
-	assert(t4 - t1 <= info.time);
+	// 预留 1ms 防止舍入误差问题
+	assert(t4 - t1 <= info.time + 1);
 	assert(info.time < t5 - t1 + 100);
 	assert(Running == info.status);
 	puts("Test task info OK!");
